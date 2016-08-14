@@ -30,7 +30,7 @@ const common = {
   postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ]
 }
 
-if(target === 'bundle') {
+if(target === 'bundle:dev') {
   module.exports = merge(common, {
     watch: true,
     debug: true,
@@ -46,18 +46,21 @@ if(target === 'bundle') {
   })
 }
 
-if(target === 'build') {
+if(target === 'bundle:dist') {
   module.exports = merge(common, {
     output: {
       path: paths.dist
     },
     plugins: [
       new ExtractTextPlugin('app.css', { allChunks: true }),
+      new webpack.optimize.OccurenceOrderPlugin(),
+      new webpack.optimize.DedupePlugin(),
+      new webpack.DefinePlugin({ 'process.env':{ 'NODE_ENV': JSON.stringify('production') } }),
       new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false } })
     ],
     module: {
       loaders: [
-        { test: /\.scss$/, include: paths.src, loader: 'css!postcss!sass'}
+        { test: /.scss$/, include: paths.src, loader: ExtractTextPlugin.extract('css!postcss!sass') }
       ]
     }
   })

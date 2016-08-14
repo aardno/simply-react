@@ -1,5 +1,30 @@
 # Dolfin Web
 
+## running
+
+to install:
+
+`npm install` or `npm i`
+
+to run:
+
+`npm start`
+
+to build:
+
+`npm run build`
+
+to test build:
+
+`npm run build-serve`
+
+* build must be run first
+* should not be used for production server
+
+to run eslint:
+
+`npm run lint`
+
 ## eslint
 
 ### eslint usage:
