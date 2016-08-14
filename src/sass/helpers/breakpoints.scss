@@ -1,0 +1,18 @@
+@mixin breakpoint($size) {
+  @media only screen and (min-width: $size) { @content; }
+}
+@mixin breakpoint-sml() {
+  @include breakpoint($break-sml);
+}
+
+@mixin breakpoint-med($rules) {
+  @include breakpoint($break-med);
+}
+
+@mixin breakpoint-lrg($rules) {
+  @include breakpoint($break-lrg);
+}
+
+@mixin breakpoint-xlg($rules) {
+  @include breakpoint($break-xlg);
+}

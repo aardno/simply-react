@@ -1,0 +1,31 @@
+@mixin abs($value) {
+  @include abs($value, $value);
+  bottom: $value;
+  right: $value;
+}
+
+@mixin abs($top, $left) {
+  @include abs;
+  top:  $top;
+  left: $left;
+}
+
+@mixin fix-bottom($height) {
+  @include fix-bottom;
+  height: $height;
+}
+
+@mixin fix-top($height) {
+  @include fix-top;
+  height: $height;
+}
+
+@mixin fix-left($width) {
+  @include fix-left;
+  width: $width;
+}
+
+@mixin fix-right($width) {
+  @include fix-right;
+  width: $width;
+}

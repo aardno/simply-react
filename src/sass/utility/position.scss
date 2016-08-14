@@ -1,0 +1,57 @@
+@mixin pos-full-width {
+  left:  0;
+  right: 0;
+}
+
+@mixin pos-full-height {
+  top:    0;
+  bottom: 0;
+}
+
+@mixin abs {
+  position: absolute;
+}
+
+@mixin abs-full-width {
+  @include abs;
+  @include pos-full-width;
+}
+
+@mixin abs-full-height {
+  @include abs;
+  @include pos-full-height;
+}
+
+@mixin fix {
+  position: fixed;
+}
+
+@mixin fix-full-width {
+  @include fix;
+  @include pos-full-width;
+}
+
+@mixin fix-full-height {
+  @include fix;
+  @include pos-full-height;
+}
+
+@mixin fix-bottom {
+  @include fix-full-width;
+  bottom: 0;
+}
+
+@mixin fix-top {
+  @include fix-full-width;
+  top: 0;
+}
+
+@mixin fix-left {
+  @include fix-full-height;
+  left: 0;
+}
+
+@mixin fix-right {
+  @include fix-full-height;
+  right: 0;
+}

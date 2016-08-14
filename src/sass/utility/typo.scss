@@ -1,0 +1,29 @@
+@mixin tera { font-size: $fontSize-tera; }
+
+@mixin giga { font-size: $fontSize-giga; }
+
+@mixin mega { font-size: $fontSize-mega; }
+
+@mixin kilo { font-size: $fontSize-kilo; }
+
+@mixin hecto { font-size: $fontSize-hecto; }
+
+@mixin deca { font-size: $fontSize-deca; }
+
+@mixin deci { font-size: $fontSize-deci; }
+
+@mixin centi { font-size: $fontSize-centi; }
+
+@mixin milli { font-size: $fontSize-milli; }
+
+@mixin micro { font-size: $fontSize-micro; }
+
+@mixin nano { font-size: $fontSize-nano; }
+
+@mixin light { font-weight: $fontWeight-light; }
+
+@mixin normal { font-weight: $fontWeight-normal; }
+
+@mixin bold { font-weight: $fontWeight-bold; }
+
+@mixin heavy { font-weight: $fontWeight-heavy; }

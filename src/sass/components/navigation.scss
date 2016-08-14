@@ -1,0 +1,40 @@
+.nav-link {
+  @include bg-aqua;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  float: left;
+
+  a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
+
+  &:hover {
+    @include bg-blue;
+  }
+
+  &-current {
+    @include bg-blue;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float: left;
+    a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 16px;
+      text-decoration: none;
+    }
+    &:hover {
+      @include bg-blue;
+    }
+  }
+
+}

@@ -1,0 +1,46 @@
+{
+  "name": "dolfin-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "bundle": "webpack",
+    "build": "webpack",
+    "html": "pug src/pages -o dev",
+    "html:build": "pug src/pages -o dist",
+    "serve": "browser-sync start --config bs.config.js",
+    "prestart": "rm -rf dev && mkdir dev",
+    "start": "npm-run-all --parallel html bundle serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.4.0",
+    "babel-core": "^6.13.2",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-react": "^6.11.1",
+    "css-loader": "^0.23.1",
+    "eslint": "^3.3.0",
+    "eslint-config-airbnb": "^10.0.1",
+    "eslint-plugin-import": "^1.13.0",
+    "eslint-plugin-jsx-a11y": "^2.1.0",
+    "eslint-plugin-react": "^6.0.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "node-sass": "^3.8.0",
+    "postcss-loader": "^0.10.0",
+    "pug-cli": "^1.0.0-alpha6",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1",
+    "webpack-merge": "^0.14.1"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.13.0",
+    "react": "^15.3.0",
+    "react-dom": "^15.3.0",
+    "react-router": "^2.6.1"
+  }
+}

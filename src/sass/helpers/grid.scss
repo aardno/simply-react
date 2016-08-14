@@ -1,0 +1,8 @@
+@mixin grid-row($gutter: $grid-gutter) {
+  @include spacing-horz($gutter);
+  display: flex;
+}
+
+@mixin grid-col($span: 1, $columns: $grid-maxCols) {
+  flex: 0 0 ($span / $columns * 100%);
+}
