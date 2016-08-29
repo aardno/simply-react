@@ -1,6 +1,6 @@
-# Dolfin Web
+# A simple react boilerplate
 
-## running
+# Running
 
 to install:
 
